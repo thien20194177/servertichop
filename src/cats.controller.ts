@@ -99,20 +99,20 @@ export class CatsController {
                   else{
                    // các sản phẩm có cluster sẽ bắt đầu xét 
                     var arr=[];
-                    for(let l=0; l<outjsonData2.length; l++){
+                    for(let l=0; l<outjsonData1.length; l++){
                       // kiểm tra trên cột lv_0 của putput2
-                      if(outjsonData2[l]['level_0']==num){
+                      if(outjsonData1[l]['level_0']==num){
                         //
                         for(let h=0; h< sourcejsonData.length; h++){
-                          if(sourcejsonData[h]['product_num']==outjsonData2[l]['level_1']) 
-                            arr.push(sourcejsonData[outjsonData2[l]['level_1']]);
+                          if(sourcejsonData[h]['product_num']==outjsonData1[l]['level_1']) 
+                            arr.push(sourcejsonData[outjsonData1[l]['level_1']]);
                         }
                       }
                       // kiểm tra trên cột lv_1 của putput2
-                      if(outjsonData2[l]['level_1']==num){
+                      if(outjsonData1[l]['level_1']==num){
                         for(let e=0; e< sourcejsonData.length; e++){
-                          if(sourcejsonData[e]['product_num']==outjsonData2[l]['level_0']) 
-                          arr.push(sourcejsonData[outjsonData2[l]['level_0']]);
+                          if(sourcejsonData[e]['product_num']==outjsonData1[l]['level_0']) 
+                          arr.push(sourcejsonData[outjsonData1[l]['level_0']]);
                         }
                       }
 
